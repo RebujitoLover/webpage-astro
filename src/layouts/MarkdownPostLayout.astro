@@ -6,7 +6,7 @@ const tags = frontmatter.tags || [];
 
 <BaseLayout pageTitle={frontmatter.title}>
     <p>Written by <b>{frontmatter.author}</b></p>
-    <p>Date: {frontmatter.pubDate.toString().slice(0, 10)}</p>
+    <p>Date: {frontmatter.pubDate.toLocaleDateString()}</p>
     <p><em>{frontmatter.description}</em></p>
     <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
     <div class="tags">
